@@ -211,6 +211,7 @@ div.numbered-step > h6::before {
   border: 0px;
   padding-top: 0px;
   line-height: unset;
+  overflow-x: unset;
 }
 
 /* change the bullet item for links to subpages */

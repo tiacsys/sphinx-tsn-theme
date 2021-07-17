@@ -198,7 +198,7 @@ function TSN () {
     tsn.updateDocsetVersions();
   };
 
-  const TSN_SESSION_KEY = "tsn";
+  const TSN_SESSION_KEY = "{{ theme_default_docset }}";
 
   /*
    * Load a versions.json from the session cache if available

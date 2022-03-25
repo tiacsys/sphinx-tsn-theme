@@ -4,7 +4,7 @@ function TSN () {
   let state = {};
 
   // XXX: do not remove the trailing '/'
-  const TSN_PATH_PREFIX = "/{{ theme_default_docset }}/doc/";
+  const TSN_PATH_PREFIX = "/doc/";
   const STABLE_VERSION_RE = /^(\d+\.)+\d+$/;
   const DEV_VERSION_RE = /^(\d+\.)+\d+-[a-z0-9]+$/;
 
@@ -68,7 +68,7 @@ function TSN () {
       }
       window.TSN.current_page = new_page;
     } else {
-      window.TSN.current_page = "{{ theme_default_docset }}/index.html";
+      window.TSN.current_page = "index.html";
     }
   };
 

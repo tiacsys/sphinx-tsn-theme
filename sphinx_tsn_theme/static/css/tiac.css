@@ -63,7 +63,12 @@
   border-width: 0;
 }
 
-/* Center-align images */
+/* align figures on center per default */
+figure.align-default {
+  text-align: center;
+}
+
+/* align figures on center per default (backward compatibility) */
 div.figure {
   text-align: center;
 }

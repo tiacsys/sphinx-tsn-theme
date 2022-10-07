@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_namespace_packages
 import re
 import os.path
 
@@ -22,7 +22,7 @@ setup(
     author_email="info@tiac-systems.net",
     description="TiaC Systems Network (TSN) theme for Sphinx",
     long_description=open("README.rst", encoding="utf-8").read(),
-    packages=["sphinx_tsn_theme"],
+    packages=find_namespace_packages(),
     package_data={
         "sphinx_tsn_theme": [
             "theme.conf",

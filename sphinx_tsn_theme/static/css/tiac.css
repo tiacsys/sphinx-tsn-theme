@@ -145,7 +145,51 @@ div#version_status {
   margin-top: 10px;
 }
 
-/* numbered steps */
+/* numbered steps counter definitions */
+
+section.numbered-step > h2::before,
+section.numbered-step > h3::before,
+section.numbered-step > h4::before,
+section.numbered-step > h5::before {
+  background: var(--docset-color);
+  border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.6em;
+  margin-right: 5px;
+  text-align: center;
+  width: 1.6em;
+}
+
+section.numbered-step > h2::before {
+  counter-increment: step-count-h2;
+  content: counter(step-count-h2);
+}
+
+section.numbered-step > h3::before {
+  counter-increment: step-count-h3;
+  content: counter(step-count-h3);
+}
+
+section.numbered-step > h4::before {
+  counter-increment: step-count-h4;
+  content: counter(step-count-h4);
+}
+
+section.numbered-step > h5::before {
+  counter-increment: step-count-h5;
+  content: counter(step-count-h5);
+}
+
+section.numbered-step > h6::before {
+  counter-increment: step-count-h6;
+  content: counter(step-count-h6);
+}
+
+/* numbered steps counter definitions (backward compatibility) */
 
 div.numbered-step > h2::before,
 div.numbered-step > h3::before,
@@ -162,22 +206,6 @@ div.numbered-step > h5::before {
   margin-right: 5px;
   text-align: center;
   width: 1.6em;
-}
-
-h1 {
-  counter-reset: step-count-h2;
-}
-h2 {
-  counter-reset: step-count-h3;
-}
-h3 {
-  counter-reset: step-count-h4;
-}
-h4 {
-  counter-reset: step-count-h5;
-}
-h5 {
-  counter-reset: step-count-h6;
 }
 
 div.numbered-step > h2::before {
@@ -205,6 +233,24 @@ div.numbered-step > h6::before {
   content: counter(step-count-h6);
 }
 
+/* numbered steps counter resets */
+
+h1 {
+  counter-reset: step-count-h2;
+}
+h2 {
+  counter-reset: step-count-h3;
+}
+h3 {
+  counter-reset: step-count-h4;
+}
+h4 {
+  counter-reset: step-count-h5;
+}
+h5 {
+  counter-reset: step-count-h6;
+}
+
 /* add a section divider */
 
 .rst-content h2 {
@@ -213,6 +259,7 @@ div.numbered-step > h6::before {
   overflow-x: auto;
   line-height: 40px;
 }
+
 .grid-item h2 {
   border: 0px;
   padding-top: 0px;
@@ -282,13 +329,6 @@ div.numbered-step > h6::before {
 
 .wy-menu-vertical li.current a {
   color: var(--docset-color);
-}
-
-div.numbered-step > h2::before,
-div.numbered-step > h3::before,
-div.numbered-step > h4::before,
-div.numbered-step > h5::before {
-  background: var(--docset-color);
 }
 
 /* put the table caption at the bottom, as done for figures */

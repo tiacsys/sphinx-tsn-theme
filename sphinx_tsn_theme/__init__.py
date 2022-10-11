@@ -16,7 +16,7 @@ except ImportError:
     from logging import getLogger
 
 
-__version__ = "2022.10.1"
+__version__ = "2022.10.2"
 __version_full__ = __version__
 
 logger = getLogger(__name__)

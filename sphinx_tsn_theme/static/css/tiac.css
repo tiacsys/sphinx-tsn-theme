@@ -5,6 +5,25 @@
   --docset-color: #808080;
 }
 
+body, html {
+  overflow-x: unset;
+}
+
+.rst-content h1,
+.rst-content h2,
+.rst-content h3,
+.rst-content h4,
+.rst-content h5,
+.rst-content h6,
+.rst-content a {
+  color: var(--docset-color) !important;
+  text-decoration: unset !important;
+}
+
+.rst-content a:visited {
+  color: var(--docset-color) !important;
+}
+
 /* make the page width fill the window */
 .wy-nav-content {
   max-width: none;

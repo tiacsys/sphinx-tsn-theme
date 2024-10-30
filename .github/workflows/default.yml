@@ -14,10 +14,14 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Package
+      - name: Install build dependencies (pypa/build)
         run: |
-          pip install --upgrade pip setuptools wheel
-          python setup.py bdist_wheel
+          pip3 install -U pip
+          pip3 install build
+
+      - name: Build distribution
+        run: |
+          python3 -m build
 
       - name: Publish package
         if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')

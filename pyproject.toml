@@ -59,10 +59,13 @@ classifiers = [
 ]
 keywords = ["sphinx", "theme", "TiaC Systems Network", "tiac", "tiacsys", "tsn"]
 
-[project.url]
+# Well-known Project URLs list:
+# https://packaging.python.org/en/latest/specifications/well-known-project-urls/
+[project.urls]
 Homepage = "https://www.tiac-systems.net/"
 Documentation = "https://github.com/tiacsys/sphinx-tsn-theme#readme-ov-file"
-Repository = "https://github.com/tiacsys/sphinx-tsn-theme"
+GitHub = "https://github.com/tiacsys/sphinx-tsn-theme"
+Repository = "https://github.com/tiacsys/sphinx-tsn-theme.git"
 Issues = "https://github.com/tiacsys/sphinx-tsn-theme/issues"
 Changelog = "https://github.com/tiacsys/sphinx-tsn-theme/releases"
 Download = "https://pypi.org/project/sphinx-tsn-theme/"
